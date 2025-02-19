@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Runner</title>
+    <link rel="stylesheet" href="chicken-runner.css" />
+    <script src="chicken-runner.js" defer></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="h-full bg-slate-50">
+    <div class="min-h-full">
+      <header class="bg-slate-100 shadow">
+        <div
+          class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between"
+        >
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+            Chicken Runner
+          </h1>
+        </div>
+      </header>
+
+      <main>
+        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+          <div class="runner-container">
+            <div class="score">
+              <span class="title">Score: </span>
+              <b>0</b>
+            </div>
+            <p class="info">Press KEY UP or KEY DOWN to start</p>
+            <div id="game">
+              <img
+                class="sky active"
+                src="/images/sky.jpg"
+                alt="pixel sky"
+                style="opacity: 1"
+              />
+              <img class="sky" src="/images/sky2.jpg" alt="pixel sky2" />
+              <img class="sky" src="/images/sky3.jpg" alt="pixel sk3" />
+              <div id="chicken">
+                <img class="chicken" src="/images/chicken.png" alt="chicken" />
+                <img
+                  class="leg right"
+                  src="/images/leg.png"
+                  alt="chicken leg"
+                />
+                <img class="leg left" src="/images/leg.png" alt="chicken leg" />
+              </div>
+              <div id="obstacle">
+                <img class="cactus" src="/images/cactus.png" alt="cactus" />
+              </div>
+              <div id="eagle">
+                <img class="eagle" src="/images/eagle.png" alt="eagle" />
+              </div>
+            </div>
+            <div id="ground">
+              <img class="ground" src="/images/ground.png" alt="ground" />
+              <div class="pixels group-1">
+                <div class="pix1"></div>
+                <div class="pix2"></div>
+                <div class="pix3"></div>
+                <div class="pix4"></div>
+                <div class="pix5"></div>
+              </div>
+              <div class="pixels group-2">
+                <div class="pix1"></div>
+                <div class="pix2"></div>
+                <div class="pix3"></div>
+                <div class="pix4"></div>
+                <div class="pix5"></div>
+              </div>
+            </div>
+            <div id="prompt" class="hidden">
+              <span class="restart">Play Again?</span>
+              <p>Press any button to continue</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
